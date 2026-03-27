@@ -446,8 +446,7 @@
         if (e.key !== "Enter") return;
         const raw = terminalInput.value.trim().toLowerCase();
         terminalInput.value = "";
-        terminalInput.style.width = "";
-        updateCursor();
+        if (isMobile) terminalInput.style.width = "1ch";
 
         if (!raw) return;
 
@@ -513,15 +512,13 @@
       });
 
       const blinkCursor = document.getElementById("blinking-cursor");
+      const isMobile = window.matchMedia("(max-width: 668px)").matches;
 
-      function updateCursor() {
-        const len = terminalInput.value.length;
-        const inputLeft = terminalInput.offsetLeft;
-        blinkCursor.style.left = inputLeft + len + "ch";
+      if (isMobile) {
+        terminalInput.addEventListener("input", () => {
+          terminalInput.style.width = Math.max(1, terminalInput.value.length) + "ch";
+        });
       }
-
-      terminalInput.addEventListener("input", updateCursor);
-      updateCursor();
     </script>
   </body>
 </html>

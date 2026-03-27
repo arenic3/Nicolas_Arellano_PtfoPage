@@ -177,7 +177,6 @@ body {
   margin-top: 1rem;
   font-size: 0.9rem;
   cursor: text;
-  position: relative;
 }
 
 .terminal-input {
@@ -187,24 +186,14 @@ body {
   color: var(--text-bright);
   font-family: inherit;
   font-size: 0.9rem;
-  caret-color: transparent;
+  caret-color: var(--text-bright);
   outline: none;
   padding: 0;
   margin: 0;
 }
 
 .blinking-cursor {
-  color: var(--text-bright);
-  -webkit-animation: blink 1s step-end infinite;
-  animation: blink 1s step-end infinite;
-  font-size: 0.9rem;
-  line-height: 1;
-  pointer-events: none;
-  display: inline-block;
-  will-change: opacity;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  position: absolute;
+  display: none;
 }
 
 .help-header {
@@ -712,6 +701,22 @@ a {
 
   .terminal-input {
     min-width: 0;
+    width: 1ch;
+    flex: 0 0 auto;
+    caret-color: transparent;
+  }
+
+  .blinking-cursor {
+    display: inline-block;
+    color: var(--text-bright);
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+    font-size: 0.9rem;
+    line-height: 1;
+    pointer-events: none;
+    will-change: opacity;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .project-item ul {
