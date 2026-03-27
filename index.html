@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Nicolas Arellano Terminal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="terminal">
+      <div class="terminal-body">
+        <div class="p10k-bar">
+          <div class="p10k-left">
+            <span class="p10k-seg seg-user"> guest@na </span><span class="p10k-arrow seg-user-arrow"></span>
+            <span class="p10k-seg seg-dir"> ~/portfolio </span><span class="p10k-arrow seg-dir-arrow"></span>
+            <span class="p10k-seg seg-branch"> main </span><span class="p10k-arrow seg-branch-arrow"></span>
+          </div>
+        </div>
+
+        <div class="content-area">
+          <section id="home" class="content-section active">
+            <div class="prompt-line">
+              <span class="prompt">$</span>
+              <span class="cmd">./welcome.sh</span>
+            </div>
+            <div class="output">
+              <pre class="ascii-art">
+ _   _ _           _
+| \ | (_) ___ ___ | | __ _ ___
+|  \| | |/ __/ _ \| |/ _` / __|
+| |\  | | (_| (_) | | (_| \__ \
+|_| \_|_|\___\___/|_|\__,_|___/
+    _             _ _
+   / \   ___ ___ | | | __ _ _ __   ___
+  / _ \ |  _/ _ \| | |/ _` | '_ \ / _ \
+ / ___ \| | | __/| | | (_| | | | | (_) |
+/_/   \_\_| \___||_|_|\__,_|_| |_|\___/
+  ____
+ / ___|_   _ _____ __ ___   __ _ _ __
+| |  _| | | |_  / '_ ` _ \ / _` | '_ \
+| |_| | |_| |/ /| | | | | | (_| | | | |
+ \____|\__,_/___|_| |_| |_|\__,_|_| |_|
+              </pre>
+              <p class="mobile-name">Nicolas Arellano Guzman</p>
+            </div>
+            <div class="prompt-line">
+              <span class="prompt">$</span>
+              <span class="cmd">help</span>
+            </div>
+            <div class="output">
+              <p class="help-header">Available commands:</p>
+              <p class="help-entry"><span class="help-cmd" data-cmd="about">about</span></p>
+              <p class="help-entry"><span class="help-cmd" data-cmd="work">work</span></p>
+              <p class="help-entry"><span class="help-cmd" data-cmd="contact">contact</span></p>
+              <p class="help-entry"><span class="help-cmd" data-cmd="home">home</span></p>
+              <p class="help-entry"><span class="help-cmd" data-cmd="clear">clear</span></p>
+            </div>
+            <div class="prompt-line">
+              <span class="prompt">$</span>
+              <span class="cmd">cat links.txt</span>
+            </div>
+            <div class="output">
+              <div class="home-links">
+                <a href="https://www.linkedin.com/in/nicolas-arellano-guzman-95a021333/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a>
+                <a href="https://github.com/arenic3" target="_blank" rel="noopener noreferrer">[GitHub]</a>
+                <a href="public/CVMar_2026.pdf" target="_blank" rel="noopener noreferrer">[CV]</a>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="content-section">
+            <div class="prompt-line">
+              <span class="prompt">$</span>
+              <span class="cmd">cat about.txt</span>
+            </div>
+            <div class="output">
+              <pre class="ascii-art">
+ _   _ _           _
+| \ | (_) ___ ___ | | __ _ ___
+|  \| | |/ __/ _ \| |/ _` / __|
+| |\  | | (_| (_) | | (_| \__ \
+|_| \_|_|\___\___/|_|\__,_|___/
+              </pre>
+              <p class="mobile-name">Nicolas</p>
+              <p class="role">//Multidisciplinary developer</p>
+              <p class="description">
+                I'm a creative computing student that builds music technology software mainly but not exclusively, I'm also
+                a casual web developer, I enjoy playing the synth (recently the minilogue), hobbyist digital artist and avid electronics&embedded systems tinkerer.
+                As a developer, my ethos is to go back to the wacky interfaces and technology that I grew up with, which I currently
+                express through design and functionality in my projects. 
+              </p>
+            </div>
+            <div class="prompt-line">
+              <span class="prompt">$</span>
+              <span class="cmd">neofetch --stats</span>
+            </div>
+            <div class="output info-block">
+              <p><span class="key">current project</span> <span class="sep">:</span> <span class="val">Sinesthesia: a cross-modal visual synthesizer</span></p>
+              <p><span class="key">focus</span> <span class="sep">:</span> <span class="val">Digital signal processing / Software Engineering / AudioVisual processing / Design</span></p>
+              <p><span class="key">tech stack</span> <span class="sep">:</span> <span class="val available">C++ / JUCE / OpenGL / GLSL / Python / Keras / TensorFlow / Node.js / Vite / Javascript / TouchDesigner </span></p>
+            </div>
+          </section>
+
+          <section id="work" class="content-section">
+            <div class="prompt-line">
+              <span class="prompt">$</span>
+              <span class="cmd">ls -la ./work/</span>
+            </div>
+            <div class="output">
+            </div>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/EMSynth.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>ElectroMagnetic synth</h3>
+                  <div class="project-tags">
+                    <span>[embedded]</span>
+                    <span>[2026]</span>
+                  </div>
+                </div>
+                <p>
+                  Built on a Bela, this synth reads midi information to play notes, accompanied by a simple attack and release envelope.
+                  The synth also makes use of two ungrounded wires antennas that control frequency modulation and filter cutoff via electromagnetic interference.
+                </p>
+                <ul>
+                  <li>C++ / DSP</li>
+                  <li>Bela / IO</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://www.instagram.com/p/DWEMwfBCL8h/?img_index=2" target="_blank" rel="noopener noferrer">[live-demo]</a>
+                  <a href="https://github.com/arenic3/EMsynthscope" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/amweb.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>anyamukhtyar.com</h3>
+                  <div class="project-tags">
+                    <span>[webpage]</span>
+                    <span>[2026]</span>
+                  </div>
+                </div>
+                <p>
+                  Despite my disdain for web development, I built this website for my very talented friend Aanya Mukhtyar, a painter and fine artist at Goldsmiths.
+                </p>
+                <ul>
+                  <li>HTML / CSS</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://www.aanyamukhtyar.com" target="_blank" rel="noopener noferrer">[site]</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/djApp.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>MixN</h3>
+                  <div class="project-tags">
+                    <span>[music hardware]</span>
+                    <span>[2025]</span>
+                  </div>
+                </div>
+                <p>
+                  Juce DJ app, UI inspired by 2000s metro aesthetics. Functionality includes a file manager, zoomed and synced waveform
+                  visualier, a one-pole filter, a crossfader, speed and gain controls.
+                </p>
+                <ul>
+                  <li>Juce / C++</li>
+                  <li>Packaged for MacOS</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/arenic3/DjApp" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                </div>
+                <div class="project-img" style="max-width: 520px;">
+                    <img src="public/MIXN.webp" alt="MixN" />
+                  </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/LightsOff.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>LightsOff</h3>
+                  <div class="project-tags">
+                    <span>[game]</span>
+                    <span>[2025-present]</span>
+                  </div>
+                </div>
+                <p>
+                  A web game built using Three.js whre players are increasingly stressed out by loud
+                  sounds and lights in a game loop where they constantly loose points. IOS port in development 
+                  using capacitor
+                </p>
+                <ul>
+                  <li>Three.js / JavaScript</li>
+                  <li>Vite / Capacitor</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/arenic3/LightsOffiOS" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                  <a href="https://www.youtube.com/watch?v=ZJXBlaHtFyg" target="_blank" rel="noopener noferrer">[demo]</a>
+                </div>
+                <div class="project-gallery">
+                  <div class="project-img" style="max-width: 400px;">
+                    <img src="public/LO1.webp" alt="LightsOff" />
+                  </div>
+                  <div class="project-img" style="max-width: 400px;">
+                    <img src="public/LO2.webp" alt="LightsOff" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/formFilt.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>Formant Filter</h3>
+                  <div class="project-tags">
+                    <span>[DSP / app]</span>
+                    <span>[2025]</span>
+                  </div>
+                </div>
+                <p>
+                  A python app that intakes any pitch and a selected vowel and returns a filtered sound using formant filtering to make the output sound like the selected vowel.
+                   The app also includes a simple GUI built with Tkinter.
+                </p>
+                <ul>
+                  <li>Python / DSP / TKinter</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://www.youtube.com/watch?v=2wW7zMmfhKo" target="_blank" rel="noopener noferrer">[demo]</a>
+                  <a href="https://github.com/arenic3/Mini-project" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/zynth.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>Zynth</h3>
+                  <div class="project-tags">
+                    <span>[DSP / embedded]</span>
+                    <span>[2025]</span>
+                  </div>
+                </div>
+                <p>
+                  Midi-controlled Bela monophonic synthesizer, complete with detuning, filter and envelope control.
+                </p>
+                <ul>
+                  <li>C++ / DSP</li>
+                  <li>Bela</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/arenic3/ZYNTH" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/granulator.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>Granular Synth</h3>
+                  <div class="project-tags">
+                    <span>[DSP / embedded]</span>
+                    <span>[2025]</span>
+                  </div>
+                </div>
+                <p>
+                  Another Bela project this time using the Trill touch sensors to scroll through different grain parameters
+                  in a simple granular synth using preset samples.
+                </p>
+                <ul>
+                  <li>C++ / DSP</li>
+                  <li>Bela / IO</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/arenic3/Granular-Synth" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/TileWorks.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>TileWorks</h3>
+                  <div class="project-tags">
+                    <span>[generative]</span>
+                    <span>[2024]</span>
+                  </div>
+                </div>
+                <p>
+                  A generative art piece using perlin noise and flow fields to draw mosaic-like tiles
+                  in geometric patterns. Greatly inspired by Tyler Hobbs.
+                </p>
+                <ul>
+                  <li>Python / py5</li>
+                </ul>
+                <div class="project-gallery">
+                  <div class="project-img" style="max-width: 300px;">
+                    <img src="public/tileW1.webp" alt="TileWorks output" />
+                  </div>
+                  <div class="project-img" style="max-width: 300px;">
+                    <img src="public/tileW2.webp" alt="TileWorks output" />
+                  </div>
+                  <div class="project-img" style="max-width: 300px;">
+                    <img src="public/tileW3.webp" alt="TileWorks output" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/relay.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>Relay</h3>
+                  <div class="project-tags">
+                    <span>[webapp]</span>
+                    <span>[2024]</span>
+                  </div>
+                </div>
+                <p>
+                  Simple web app using SQL Node and express to create a messaging & user management system
+                  for students and teachers.
+                </p>
+                <ul>
+                  <li>HTML / CSS / EJS / Node.js / Express / SQL</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/arenic3/RELAY" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                </div>
+                </div>
+              </div>
+            </article>
+
+          </section>
+
+          <section id="contact" class="content-section">
+            <div class="prompt-line">
+              <span class="prompt">$</span>
+              <span class="cmd">./send_message.sh</span>
+            </div>
+            <div class="output">
+              <p class="description">
+                Reach out to me!
+              </p>
+            </div>
+            <form class="contact-form" id="contact-form">
+              <input type="hidden" name="title" value="Portfolio Contact Form" />
+              <label>
+                <span class="form-prompt">name&gt;</span>
+                <input type="text" name="from_name" placeholder="your_name" required />
+              </label>
+              <label>
+                <span class="form-prompt">email&gt;</span>
+                <input type="email" name="from_email" placeholder="you@email.com" required />
+              </label>
+              <label>
+                <span class="form-prompt">message&gt;</span>
+                <textarea name="message" placeholder="...?" required></textarea>
+              </label>
+              <button type="submit" class="btn">[send]</button>
+              <p class="sys-msg" id="form-status"></p>
+            </form>
+          </section>
+
+          <div class="terminal-input-line">
+            <span class="prompt">$</span>
+            <input type="text" id="terminal-input" class="terminal-input" spellcheck="false" autocomplete="off" autofocus />
+          </div>
+        </div>
+
+        <div class="terminal-footer">
+          <p>&copy; <span id="year"></span> Nicolas Arellano</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const sections = document.querySelectorAll(".content-section");
+      const terminalInput = document.getElementById("terminal-input");
+
+      function showSection(name) {
+        const target = document.getElementById(name);
+        if (!target) return false;
+        sections.forEach((s) => s.classList.remove("active"));
+        target.classList.add("active");
+        window.scrollTo({ top: 0, behavior: "instant" });
+        return true;
+      }
+
+      terminalInput.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter") return;
+        const raw = terminalInput.value.trim().toLowerCase();
+        terminalInput.value = "";
+
+        if (!raw) return;
+
+        const commands = {
+          home: () => showSection("home"),
+          about: () => showSection("about"),
+          work: () => showSection("work"),
+          contact: () => showSection("contact"),
+          help: () => showSection("home"),
+          clear: () => {
+            sections.forEach((s) => s.classList.remove("active"));
+            return true;
+          },
+        };
+
+        const fn = commands[raw];
+        if (fn) {
+          fn();
+        }
+      });
+
+      document.querySelectorAll(".help-cmd[data-cmd]").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const cmd = el.dataset.cmd;
+          if (cmd === "clear") {
+            sections.forEach((s) => s.classList.remove("active"));
+          } else {
+            showSection(cmd);
+          }
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".contact-form")) terminalInput.focus({ preventScroll: true });
+      });
+
+      emailjs.init("je9PL-_r8N33pmQe0");
+
+      document.getElementById("contact-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector(".btn");
+        const status = document.getElementById("form-status");
+        btn.disabled = true;
+        btn.textContent = "[sending...]";
+        status.textContent = "";
+        status.className = "sys-msg";
+
+        emailjs.sendForm("service_jkjy24z", "template_v8gnyqi", e.target)
+          .then(() => {
+            status.textContent = "Message sent successfully.";
+            status.classList.add("success");
+            e.target.reset();
+          })
+          .catch((err) => {
+            console.error("EmailJS error:", err);
+            status.textContent = "Failed to send: " + (err.text || err.message || "unknown error");
+          })
+          .finally(() => {
+            btn.disabled = false;
+            btn.textContent = "[send]";
+          });
+      });
+    </script>
+  </body>
+</html>
