@@ -410,11 +410,7 @@
 
           <div class="terminal-input-line">
             <span class="prompt">$</span>
-            <div class="input-wrapper">
-              <input type="text" id="terminal-input" class="terminal-input" spellcheck="false" autocomplete="off" autofocus />
-              <span class="blinking-cursor" id="blinking-cursor">&#9608;</span>
-              <span class="input-mirror" id="input-mirror"></span>
-            </div>
+            <input type="text" id="terminal-input" class="terminal-input" spellcheck="false" autocomplete="off" autofocus /><span class="blinking-cursor" id="blinking-cursor">&#9608;</span>
           </div>
         </div>
 
@@ -443,6 +439,7 @@
         if (e.key !== "Enter") return;
         const raw = terminalInput.value.trim().toLowerCase();
         terminalInput.value = "";
+        terminalInput.style.width = "1ch";
 
         if (!raw) return;
 
@@ -507,15 +504,8 @@
           });
       });
 
-      const mirror = document.getElementById("input-mirror");
-      const cursor = document.getElementById("blinking-cursor");
       terminalInput.addEventListener("input", () => {
-        mirror.textContent = terminalInput.value;
-        cursor.style.left = mirror.scrollWidth + "px";
-      });
-      terminalInput.addEventListener("change", () => {
-        mirror.textContent = terminalInput.value;
-        cursor.style.left = mirror.scrollWidth + "px";
+        terminalInput.style.width = (terminalInput.value.length + 1) + "ch";
       });
     </script>
   </body>
