@@ -446,7 +446,8 @@
         if (e.key !== "Enter") return;
         const raw = terminalInput.value.trim().toLowerCase();
         terminalInput.value = "";
-        terminalInput.style.width = "1ch";
+        terminalInput.style.width = "";
+        updateCursor();
 
         if (!raw) return;
 
@@ -511,9 +512,16 @@
           });
       });
 
-      terminalInput.addEventListener("input", () => {
-        terminalInput.style.width = (terminalInput.value.length + 1) + "ch";
-      });
+      const blinkCursor = document.getElementById("blinking-cursor");
+
+      function updateCursor() {
+        const len = terminalInput.value.length;
+        const inputLeft = terminalInput.offsetLeft;
+        blinkCursor.style.left = inputLeft + len + "ch";
+      }
+
+      terminalInput.addEventListener("input", updateCursor);
+      updateCursor();
     </script>
   </body>
 </html>

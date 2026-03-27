@@ -177,10 +177,11 @@ body {
   margin-top: 1rem;
   font-size: 0.9rem;
   cursor: text;
+  position: relative;
 }
 
 .terminal-input {
-  width: 1ch;
+  flex: 1;
   background: transparent;
   border: none;
   color: var(--text-bright);
@@ -203,6 +204,7 @@ body {
   will-change: opacity;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  position: absolute;
 }
 
 .help-header {
