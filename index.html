@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <title>Nicolas Arellano Terminal</title>
+    <title>NShell</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -410,7 +410,11 @@
 
           <div class="terminal-input-line">
             <span class="prompt">$</span>
-            <input type="text" id="terminal-input" class="terminal-input" spellcheck="false" autocomplete="off" autofocus />
+            <div class="input-wrapper">
+              <input type="text" id="terminal-input" class="terminal-input" spellcheck="false" autocomplete="off" autofocus />
+              <span class="blinking-cursor" id="blinking-cursor">&#9608;</span>
+              <span class="input-mirror" id="input-mirror"></span>
+            </div>
           </div>
         </div>
 
@@ -501,6 +505,17 @@
             btn.disabled = false;
             btn.textContent = "[send]";
           });
+      });
+
+      const mirror = document.getElementById("input-mirror");
+      const cursor = document.getElementById("blinking-cursor");
+      terminalInput.addEventListener("input", () => {
+        mirror.textContent = terminalInput.value;
+        cursor.style.left = mirror.scrollWidth + "px";
+      });
+      terminalInput.addEventListener("change", () => {
+        mirror.textContent = terminalInput.value;
+        cursor.style.left = mirror.scrollWidth + "px";
       });
     </script>
   </body>

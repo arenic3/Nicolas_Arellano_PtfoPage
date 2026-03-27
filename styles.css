@@ -166,17 +166,48 @@ body {
   gap: 0.6rem;
   margin-top: 1rem;
   font-size: 0.9rem;
+  cursor: text;
 }
 
 .terminal-input {
+  width: 0;
+  min-width: 0;
   flex: 1;
   background: transparent;
   border: none;
   color: var(--text-bright);
   font-family: inherit;
   font-size: 0.9rem;
-  caret-color: var(--text-bright);
+  caret-color: transparent;
   outline: none;
+}
+
+.blinking-cursor {
+  color: var(--text-bright);
+  animation: blink 1s step-end infinite;
+  font-size: 0.9rem;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+}
+
+.input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.input-mirror {
+  visibility: hidden;
+  white-space: pre;
+  font-family: inherit;
+  font-size: 0.9rem;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
 }
 
 .help-header {
