@@ -6,10 +6,10 @@
   --text-bright: #ffffff;
   --muted: #6b6b6b;
   --border: #333;
-  --blue: #077992;
-  --yellow: #facc15;
-  --cyan: #bc02b6;
-  --magenta: #0c14a4;
+  --blue: #fff200;
+  --yellow: #dfd967;
+  --cyan: #bea433;
+  --magenta: #999def;
   font-size: clamp(14px, 1.1vw, 17px);
 }
 
@@ -68,6 +68,18 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.p10k-bar:focus-visible {
+  outline: 1px solid var(--blue);
+  outline-offset: 4px;
 }
 
 .p10k-left {

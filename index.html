@@ -23,13 +23,13 @@
   <body>
     <div class="terminal">
       <div class="terminal-body">
-        <div class="p10k-bar">
-          <div class="p10k-left">
+        <button type="button" class="p10k-bar" id="home-button" aria-label="Go home">
+          <span class="p10k-left">
             <span class="p10k-seg seg-user"> guest@na </span><span class="p10k-arrow seg-user-arrow"></span>
             <span class="p10k-seg seg-dir"> ~/portfolio </span><span class="p10k-arrow seg-dir-arrow"></span>
             <span class="p10k-seg seg-branch"> main </span><span class="p10k-arrow seg-branch-arrow"></span>
-          </div>
-        </div>
+          </span>
+        </button>
 
         <div class="content-area">
           <section id="home" class="content-section active">
@@ -62,7 +62,7 @@
               <span class="cmd">help</span>
             </div>
             <div class="output">
-              <p class="help-header">Available commands:</p>
+              <p class="help-header">Try these commands!:</p>
               <p class="help-entry"><span class="help-cmd" data-cmd="about">about</span></p>
               <p class="help-entry"><span class="help-cmd" data-cmd="work">work</span></p>
               <p class="help-entry"><span class="help-cmd" data-cmd="contact">contact</span></p>
@@ -122,6 +122,36 @@
             </div>
             <div class="output">
             </div>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/Bi-TOUCH.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>Bi-TOUCH</h3>
+                  <div class="project-tags">
+                    <span>[embedded]</span>
+                    <span>[2026]</span>
+                  </div>
+                </div>
+                <p>
+                  Built on a Bela, this project involves a delay line controlled via TRILL touch sensors, wired to a local websocket server that sends JSON
+                  to an HTML page running a Hydra script for visuals.
+                </p>
+                <ul>
+                  <li>C++ / DSP/ TCP</li>
+                  <li>Bela / AV / Hydra</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/arenic3/Bi-TOUCH" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                  <div class="project-img" style="max-width: 520px;">
+                    <img src="public/Bi-TOUCH.webp" alt="Bi-TOUCH" />
+                  </div>
+                </div>
+              </div>
+            </article>
 
             <article class="project-item">
               <div class="prompt-line">
@@ -432,6 +462,7 @@
 
       const sections = document.querySelectorAll(".content-section");
       const terminalInput = document.getElementById("terminal-input");
+      const homeButton = document.getElementById("home-button");
 
       function showSection(name) {
         const target = document.getElementById(name);
@@ -479,6 +510,8 @@
           }
         });
       });
+
+      homeButton.addEventListener("click", () => showSection("home"));
 
       document.addEventListener("click", (e) => {
         if (!e.target.closest(".contact-form")) terminalInput.focus({ preventScroll: true });
