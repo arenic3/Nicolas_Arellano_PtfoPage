@@ -4,14 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>NShell</title>
-    <link rel="stylesheet" href="styles.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=2" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"  
-    />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -39,11 +33,23 @@
             </div>
             <div class="output">
               <pre class="ascii-art">
- ▐ ▄   ▪ ▄▄·       ▄▄▌   ▄▄▄· .▄▄ ·      ▄▄▄· ▄▄▄  ▄▄▄ .▄▄▌  ▄▄▌   ▄▄▄·  ▐ ▄            ▄▄ • ▄• ▄▌·▄▄▄▄•• ▌ ▄ ·.  ▄▄▄·  ▐ ▄ 
-•█▌▐  █ ▐█ ▌▪▪     ██•  ▐█ ▀█ ▐█ ▀.     ▐█ ▀█ ▀▄ █·▀▄.▀·██•  ██•  ▐█ ▀█ •█▌▐█▪         ▐█ ▀ ▪█▪██▌▪▀·.█▌·██ ▐███▪▐█ ▀█ •█▌▐█
-▐█▐▐▌▐█·██ ▄▄ ▄█▀▄ ██▪  ▄█▀▀█ ▄▀▀▀█▄    ▄█▀▀█ ▐▀▀▄ ▐▀▀▪▄██▪  ██▪  ▄█▀▀█ ▐█▐▐▌ ▄█▀▄     ▄█ ▀█▄█▌▐█▌▄█▀▀▀•▐█ ▌▐▌▐█·▄█▀▀█ ▐█▐▐▌
-██▐█▌▐█▌▐███▌▐█▌.▐▌▐█▌▐▌▐█ ▪▐▌▐█▄▪▐█    ▐█ ▪▐▌▐█•█▌▐█▄▄▌▐█▌▐▌▐█▌▐▌▐█ ▪▐▌██▐█▌▐█▌.▐▌    ▐█▄▪▐█▐█▄█▌█▌▪▄█▀██ ██▌▐█▌▐█ ▪▐▌██▐█▌
-▀▀ █▪▀▀▀·▀▀▀  ▀█▄▀▪.▀▀▀  ▀  ▀  ▀▀▀▀      ▀  ▀ .▀  ▀ ▀▀▀ .▀▀▀ .▀▀▀  ▀  ▀ ▀▀ █▪ ▀█▄▀▪    ·▀▀▀▀  ▀▀▀ ·▀▀▀ •▀▀  █▪▀▀▀ ▀  ▀ ▀▀ █▪
+ ▐ ▄   ▪ ▄▄·       ▄▄▌   ▄▄▄· .▄▄ ·
+•█▌▐  █ ▐█ ▌▪▪     ██•  ▐█ ▀█ ▐█ ▀.
+▐█▐▐▌▐█·██ ▄▄ ▄█▀▄ ██▪  ▄█▀▀█ ▄▀▀▀█▄
+██▐█▌▐█▌▐███▌▐█▌.▐▌▐█▌▐▌▐█ ▪▐▌▐█▄▪▐█
+▀▀ █▪▀▀▀·▀▀▀  ▀█▄▀▪.▀▀▀  ▀  ▀  ▀▀▀▀
+
+ ▄▄▄· ▄▄▄  ▄▄▄ .▄▄▌  ▄▄▌   ▄▄▄·  ▐ ▄
+▐█ ▀█ ▀▄ █·▀▄.▀·██•  ██•  ▐█ ▀█ •█▌▐█▪
+▄█▀▀█ ▐▀▀▄ ▐▀▀▪▄██▪  ██▪  ▄█▀▀█ ▐█▐▐▌ ▄█▀▄
+▐█ ▪▐▌▐█•█▌▐█▄▄▌▐█▌▐▌▐█▌▐▌▐█ ▪▐▌██▐█▌▐█▌.▐▌
+ ▀  ▀ .▀  ▀ ▀▀▀ .▀▀▀ .▀▀▀  ▀  ▀ ▀▀ █▪ ▀█▄▀▪
+
+ ▄▄ • ▄• ▄▌·▄▄▄▄•• ▌ ▄ ·.  ▄▄▄·  ▐ ▄
+▐█ ▀ ▪█▪██▌▪▀·.█▌·██ ▐███▪▐█ ▀█ •█▌▐█
+▄█ ▀█▄█▌▐█▌▄█▀▀▀•▐█ ▌▐▌▐█·▄█▀▀█ ▐█▐▐▌
+▐█▄▪▐█▐█▄█▌█▌▪▄█▀██ ██▌▐█▌▐█ ▪▐▌██▐█▌
+·▀▀▀▀  ▀▀▀ ·▀▀▀ •▀▀  █▪▀▀▀ ▀  ▀ ▀▀ █▪
               </pre>
               <p class="mobile-name">Nicolas Arellano Guzman</p>
             </div>
@@ -112,6 +118,35 @@
             </div>
             <div class="output">
             </div>
+
+            <article class="project-item">
+              <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="cmd">cat work/Sinesthesia.md</span>
+              </div>
+              <div class="output">
+                <div class="project-header">
+                  <h3>Sinesthesia</h3>
+                  <div class="project-tags">
+                    <span>[VST]</span>
+                    <span>[2026]</span>
+                  </div>
+                </div>
+                <p>
+                  Placeholder
+                </p>
+                <ul>
+                  <li>C++ / OpenGL / JUCE</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/arenic3/Bi-TOUCH" target="_blank" rel="noopener noferrer">[github-repo]</a>
+                  <div class="project-img" style="max-width: 520px;">
+                    <img src="public/Bi-TOUCH.webp" alt="Bi-TOUCH" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
 
             <article class="project-item">
               <div class="prompt-line">

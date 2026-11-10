@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: "Fira Code", "Courier New", "Lucida Console", Monaco, monospace;
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace;
   background: #000000;
   color: var(--text);
   margin: 0;
@@ -260,8 +260,9 @@ body {
 
 .ascii-art {
   color: var(--muted);
-  font-size: 0.6rem;
-  line-height: 1.3;
+  font-family: "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.2;
   margin: 0;
   overflow-x: auto;
   max-width: 100%;
@@ -615,7 +616,7 @@ a {
 
   .ascii-art {
     overflow-x: clip;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 
   .prompt-line {
