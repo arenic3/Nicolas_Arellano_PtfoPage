@@ -1,15 +1,15 @@
 :root {
   --bg: #000000;
-  --bg-light: #0a0a0a;
-  --bg-surface: #111111;
-  --text: #d4d4d4;
+  --bg-light: #000000;
+  --bg-surface: #000000;
+  --text: #ffffff;
   --text-bright: #ffffff;
-  --muted: #6b6b6b;
+  --muted: #ffffff;
   --border: #333;
   --blue: #ffffff;
-  --yellow: #575757;
+  --yellow: #ffffff;
   --cyan: #ffffff;
-  --magenta: #575757;
+  --magenta: #ffffff;
   font-size: clamp(14px, 1.1vw, 17px);
 }
 
@@ -745,5 +745,32 @@ a {
   pre {
     overflow-x: clip;
     max-width: 100%;
+  }
+}
+
+#glitch-margin,
+#glitch-column {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+#glitch-margin {
+  z-index: 1;
+}
+
+#glitch-column {
+  z-index: 2;
+  opacity: 0.45;
+  filter: blur(2.5px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #glitch-margin,
+  #glitch-column {
+    display: none;
   }
 }
