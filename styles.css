@@ -6,10 +6,10 @@
   --text-bright: #ffffff;
   --muted: #6b6b6b;
   --border: #333;
-  --blue: #fff200;
-  --yellow: #dfd967;
-  --cyan: #bea433;
-  --magenta: #999def;
+  --blue: #ffffff;
+  --yellow: #575757;
+  --cyan: #ffffff;
+  --magenta: #575757;
   font-size: clamp(14px, 1.1vw, 17px);
 }
 
